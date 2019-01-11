@@ -1,25 +1,53 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Column from "./Components/Column";
 
-class App extends Component {
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      cards: [
+        // {
+        // id: Number,
+        // name: String,
+        // description: String,
+        // category: String
+        // }
+
+        {
+          id: 1,
+          name: "Sebbel",
+          description: "Mentor as a React Gaurdian Angel",
+          category: "mentor"
+        }
+      ]
+    };
+  }
+
+  getCards(category) {
+    // return all cards with category as category
+    const cards = this.state.cards.filter(card => card.category === category);
+
+    return cards;
+  }
+
+  // sebbel is your react guardian angel
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Column name="Looking for mentors" cards={this.getCards("mentee")} />
+        <Column
+          name="Looking to teach/mentor"
+          cards={this.getCards("mentor")}
+        />
+        <Column
+          name="Looking for OS projects to contribute to"
+          cards={this.getCards("OS")}
+        />
+        <Column
+          name="Looking for contributors"
+          cards={this.getCards("contributor")}
+        />
       </div>
     );
   }
