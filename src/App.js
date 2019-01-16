@@ -1,5 +1,6 @@
 import React from "react";
 import Column from "./Components/Column";
+import cardData from './cardData.js'
 
 class App extends React.Component {
   constructor() {
