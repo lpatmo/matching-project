@@ -1,11 +1,12 @@
 import React from "react";
 import Column from "./Components/Column";
-import cardData from './cardData.js'
+import cardData from './cardData'
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      //instead of an object here, should be cards: cardData
       cards: [
         // {
         // id: Number,
