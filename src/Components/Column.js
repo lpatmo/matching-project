@@ -16,7 +16,7 @@ class Column extends React.Component {
     });
 
     return (
-      <div>
+      <div className="column">
         <button onClick={this.changeParentState}>Change Parent State</button>
         <h1>{this.props.name}</h1>
         {columnCards}
