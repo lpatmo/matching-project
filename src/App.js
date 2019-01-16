@@ -7,7 +7,8 @@ class App extends React.Component {
     super();
     this.state = {
       //instead of an object here, should be cards: cardData
-      cards: [
+      cards: cardData
+     // cards: [
         // {
         // id: Number,
         // name: String,
@@ -15,13 +16,13 @@ class App extends React.Component {
         // category: String
         // }
 
-        {
-          id: 1,
-          name: "Sebbel",
-          description: "Mentor as a React Gaurdian Angel",
-          category: "mentor"
-        }
-      ]
+      //   {
+      //     id: 1,
+      //     name: "Sebbel",
+      //     description: "Mentor as a React Gaurdian Angel",
+      //     category: "mentor"
+      //   }
+      // ]
     };
   }
 
