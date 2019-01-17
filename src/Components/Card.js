@@ -6,7 +6,7 @@ class Card extends React.Component {
   }
   render() {
     return (
-      <article>
+      <article className="card">
         <p>{this.props.name}</p>
         <p>{this.props.description}</p>
       </article>
