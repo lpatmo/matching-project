@@ -2,10 +2,6 @@ import React from "react";
 import Card from "./Card";
 
 class Column extends React.Component {
-  constructor() {
-    super();
-  }
-
   changeParentState(event) {
     this.props.cards = [];
   }

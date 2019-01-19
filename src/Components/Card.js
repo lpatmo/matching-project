@@ -1,9 +1,6 @@
 import React from "react";
 
 class Card extends React.Component {
-  constructor() {
-    super();
-  }
   render() {
     return (
       <article className="card">
