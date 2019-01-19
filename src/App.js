@@ -1,6 +1,7 @@
 import React from "react";
 import Column from "./Components/Column";
 import cardData from './cardData'
+import Form from "./Components/Form";
 
 class App extends React.Component {
   constructor() {
@@ -38,6 +39,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Form />
         <Column name="Looking for mentors" cards={this.getCards("mentee")} />
         <Column
           name="Looking to teach/mentor"
