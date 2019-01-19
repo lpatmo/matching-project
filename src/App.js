@@ -8,7 +8,9 @@ class App extends React.Component {
     super();
     this.state = {
       //instead of an object here, should be cards: cardData
-      cards: cardData
+      cards: cardData,
+      activeForm: true
+
      // cards: [
         // {
         // id: Number,
@@ -27,6 +29,10 @@ class App extends React.Component {
     };
   }
 
+  toggleForm = () => {
+    this.setState({activeForm: !this.state.activeForm })
+  }
+
   getCards(category) {
     // return all cards with category as category
     const cards = this.state.cards.filter(card => card.category === category);
@@ -39,7 +45,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Form />
+        <div className="column">
+          <button onClick={this.toggleForm}>Add Card</button>
+
+          { this.state.activeForm ? <Form /> : '' }
+        </div>
         <Column name="Looking for mentors" cards={this.getCards("mentee")} />
         <Column
           name="Looking to teach/mentor"
