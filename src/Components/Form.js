@@ -11,7 +11,10 @@ class Form extends React.Component {
     }
   }
 
- 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.handleSubmit(this.state)
+  }
 
   handleChange = (event) => {
     const {name, value} = event.target
@@ -22,7 +25,7 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.props.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <div>
           <label htmlFor="name">
             Name

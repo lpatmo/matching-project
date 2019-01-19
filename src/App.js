@@ -10,33 +10,20 @@ class App extends React.Component {
       //instead of an object here, should be cards: cardData
       cards: cardData,
       activeForm: true
-
-     // cards: [
-        // {
-        // id: Number,
-        // name: String,
-        // description: String,
-        // category: String
-        // }
-
-      //   {
-      //     id: 1,
-      //     name: "Sebbel",
-      //     description: "Mentor as a React Gaurdian Angel",
-      //     category: "mentor"
-      //   }
-      // ]
     };
   }
-  handleSubmit = event => {
-    event.preventDefault();
-    //console.log(event.target)
-    console.log(this.state)
-    this.setState({
-      
-    })
+
+  handleSubmit = stateObj => {
+    console.log(stateObj);
+    // Deconstruct `stateObj` and add as a new object in `this.state.cards`
+    // ID needs to be added
+    // const appCards = this.state.cards;
+    this.setState(prevState => {
+      prevState.cards.push(stateObj);
+      console.log(this.state.cards);
+    });
   };
-  
+
   toggleForm = () => {
     this.setState({activeForm: !this.state.activeForm })
   }
@@ -44,11 +31,8 @@ class App extends React.Component {
   getCards(category) {
     // return all cards with category as category
     const cards = this.state.cards.filter(card => card.category === category);
-
     return cards;
   }
-
-  // sebbel is your react guardian angel
 
   render() {
     return (
