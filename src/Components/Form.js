@@ -11,36 +11,41 @@ class Form extends React.Component {
     }
   }
 
-  handleSubmit = event => {
-    event.preventDefault();
-  };
+ 
+
+  handleChange = (event) => {
+    const {name, value} = event.target
+    this.setState({
+      [name] : value
+    })
+  }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.props.handleSubmit}>
         <div>
-          <label for="name">
+          <label htmlFor="name">
             Name
           </label>
-          <input type="text" name="name" placeholder="Name" value={this.state.name} />
+          <input onChange={this.handleChange} type="text" name="name" placeholder="Name" value={this.state.name} />
         </div>
         <div>
-          <label for="description">
+          <label htmlFor="description">
             Description
           </label>
-          <textarea type="textarea" name="description" placeholder="description" value={this.state.description} />
+          <textarea onChange={this.handleChange} type="textarea" name="description" placeholder="description" value={this.state.description} />
         </div>
         <div>
-          <label for="email">
+          <label htmlFor="email">
             Email
           </label>
-          <input type="email" name="email" placeholder="email" />
+          <input onChange={this.handleChange} type="email" name="email" placeholder="email" />
         </div>
         <div>
-          <label for="category">
+          <label htmlFor="category">
             Category
           </label>
-          <select name="category" value={this.state.category}>
+          <select onChange={this.handleChange} name="category" value={this.state.category}>
             <option value="mentorSignup">I want to teach/mentor</option>
             <option value="menteeSignup">I want a mentor</option>
             <option value="contributorSignup">
