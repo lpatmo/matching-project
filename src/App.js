@@ -28,7 +28,15 @@ class App extends React.Component {
       // ]
     };
   }
-
+  handleSubmit = event => {
+    event.preventDefault();
+    //console.log(event.target)
+    console.log(this.state)
+    this.setState({
+      
+    })
+  };
+  
   toggleForm = () => {
     this.setState({activeForm: !this.state.activeForm })
   }
@@ -48,7 +56,7 @@ class App extends React.Component {
         <div className="column">
           <button onClick={this.toggleForm}>Add Card</button>
 
-          { this.state.activeForm ? <Form /> : '' }
+          { this.state.activeForm ? <Form handleSubmit={this.handleSubmit}/> : '' }
         </div>
         <Column name="Looking for mentors" cards={this.getCards("mentee")} />
         <Column

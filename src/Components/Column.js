@@ -12,7 +12,7 @@ class Column extends React.Component {
 
   render() {
     const columnCards = this.props.cards.map(card => {
-      return <Card name={card.name} description={card.description} />;
+      return <Card key={card.id} name={card.name} description={card.description} />;
     });
 
     return (
