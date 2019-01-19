@@ -7,7 +7,7 @@ class Form extends React.Component {
       'name': '',
       'description': '',
       'email': '',
-      'category': ''
+      'category': 'mentorSignup'
     }
   }
 

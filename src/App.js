@@ -16,9 +16,14 @@ class App extends React.Component {
   handleSubmit = stateObj => {
     console.log(stateObj);
     // Deconstruct `stateObj` and add as a new object in `this.state.cards`
+
     // ID needs to be added
-    // const appCards = this.state.cards;
+    //TODO: Make sure the id updates correctly (and does not equal the very last card ID)
+    let lastCardId = this.state.cards[this.state.cards.length-1].id 
     this.setState(prevState => {
+      console.log(prevState)
+      console.log(lastCardId)
+      stateObj['id'] = lastCardId + 1;
       prevState.cards.push(stateObj);
       console.log(this.state.cards);
     });
