@@ -49,18 +49,18 @@ class App extends React.Component {
 
           { this.state.activeForm ? <Form handleSubmit={this.handleSubmit}/> : '' }
         </div>
-        <Column name="Looking for mentors" cards={this.getCards("mentee")} />
+        <Column name="Looking for mentors" cards={this.getCards("menteeSignup")} />
         <Column
           name="Looking to teach/mentor"
-          cards={this.getCards("mentor")}
+          cards={this.getCards("mentorSignup")}
         />
         <Column
           name="Looking for OS projects to contribute to"
-          cards={this.getCards("OS")}
+          cards={this.getCards("contributorSignup")}
         />
         <Column
           name="Looking for contributors"
-          cards={this.getCards("contributor")}
+          cards={this.getCards("projectSignup")}
         />
       </div>
     );

@@ -4,13 +4,13 @@ const cardData = [
           id: 1,
           name: "Sebbel",
           description: "Mentor as a React Guardian Angel",
-          category: "mentor"
+          category: "mentorSignup"
         },
         {
           id: 2,
           name: "Someone",
           description: "Mentor as a Python Guardian Angel",
-          category: "mentor"
+          category: "menteeSignup"
         }
  ]      
  export default cardData
