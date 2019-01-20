@@ -1,7 +1,7 @@
 import React from "react";
 
 class Card extends React.Component {
-  render() {
+  render(props) {
     return (
       <article className="card">
         <p>{this.props.name}</p>

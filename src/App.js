@@ -35,7 +35,9 @@ class App extends React.Component {
 
   getCards(category) {
     // return all cards with category as category
+    console.log('this is this.state.cards', this.state.cards)
     const cards = this.state.cards.filter(card => card.category === category);
+    console.log('this is cards', cards)
     return cards;
   }
 
