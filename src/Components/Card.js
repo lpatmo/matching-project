@@ -6,6 +6,7 @@ class Card extends React.Component {
       <article className="card">
         <p>{this.props.name}</p>
         <p>{this.props.description}</p>
+        <p>{this.props.email}</p>
         <button>Edit</button>
       </article>
     );

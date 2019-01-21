@@ -26,6 +26,7 @@ class App extends React.Component {
       stateObj['id'] = lastCardId + 1;
       prevState.cards.push(stateObj);
       console.log(this.state.cards);
+      return this.state;  
     });
   };
 
