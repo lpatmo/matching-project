@@ -5,7 +5,7 @@ class Column extends React.Component {
 
   render(props) {
     const columnCards = this.props.cards.map(card => {
-      return <Card key={card.id} name={card.name} description={card.description} />;
+      return <Card key={card.id} name={card.name} email={card.email} description={card.description} />;
     });
 
     return (
